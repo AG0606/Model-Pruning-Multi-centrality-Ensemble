@@ -19,7 +19,7 @@ Traditional neural network pruning often relies on simple magnitude-based heuris
 
 ## Repository Structure
 
-* **`02_enhanced_pruning.ipynb`**
+* **`02_enhanced_pruning_multi-centrality.ipynb`**
   The core notebook containing the final, enhanced implementation. It includes the dataset factory, model architectures (GrayCNN/ColorCNN), multi-centrality ensemble algorithm, iterative pruning pipeline, cross-dataset validation, and a comprehensive visualization dashboard.
 * **`01_baseline_pruning.ipynb`**
   The baseline case study implementation. This notebook introduces the fundamental concept of reframing fully-connected layers as bipartite graphs and applying basic Degree Centrality for pruning.
@@ -42,7 +42,7 @@ For each node $v$ in the output partition, the algorithm calculates:
 The final score is a weighted, min-max normalized combination of the three. Neurons/filters with the lowest $S(v)$ are selected for pruning.
 
 ### Performance Highlights
-As demonstrated in the `02_enhanced_pruning.ipynb` dashboard, the iterative annealing schedule allows the network to maintain near-baseline accuracy even after significant parameter reduction, adapting seamlessly across different dataset complexities.
+As demonstrated in the `02_enhanced_pruning_multi-centrality.ipynb` dashboard, the iterative annealing schedule allows the network to maintain near-baseline accuracy even after significant parameter reduction, adapting seamlessly across different dataset complexities.
 
 ## Requirements
 
